@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4911057012121422, guid: 5e45c8f884f6d124ea0499aae7fdbec8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.36
+      value: -11.95
       objectReference: {fileID: 0}
     - target: {fileID: 4911057012121422, guid: 5e45c8f884f6d124ea0499aae7fdbec8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -102,7 +102,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &6548923903728939966
+--- !u!135 &2040859965448469936
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,7 +113,20 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.35
+  m_Radius: 0.4
+  m_Center: {x: 0, y: 0.35, z: 0}
+--- !u!135 &5748521150679947644
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2652863052450281656}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
   m_Center: {x: 0, y: 0.35, z: 0}
 --- !u!195 &2020008330
 NavMeshAgent:
@@ -149,6 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9c5a1c2c999034f988e2cbb3bd6762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
+  explosion: 0
 --- !u!114 &8770251303812683282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,7 +189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6756eed90ca8dc34ea7a9c5e37e58289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 2703761623545053800}
   target: {fileID: 0}
 --- !u!95 &2703761623545053800 stripped
 Animator:
