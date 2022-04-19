@@ -276,10 +276,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bomb_Ennemy
       objectReference: {fileID: 0}
-    - target: {fileID: 5748521150679947644, guid: 3fb3257335aab5e43a0f3aaa491b6f0e, type: 3}
-      propertyPath: m_Radius
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8786155999444783724, guid: 3fb3257335aab5e43a0f3aaa491b6f0e, type: 3}
       propertyPath: target
       value: 

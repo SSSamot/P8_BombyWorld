@@ -59,6 +59,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 137188083824238930, guid: 5e45c8f884f6d124ea0499aae7fdbec8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bff4f160cd4790247bf788062d49882c, type: 2}
     - target: {fileID: 199038825183119038, guid: 5e45c8f884f6d124ea0499aae7fdbec8, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -126,7 +130,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 2
   m_Center: {x: 0, y: 0.35, z: 0}
 --- !u!195 &2020008330
 NavMeshAgent:
@@ -164,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   explosion: 0
+  player: {fileID: 0}
 --- !u!114 &8770251303812683282
 MonoBehaviour:
   m_ObjectHideFlags: 0
