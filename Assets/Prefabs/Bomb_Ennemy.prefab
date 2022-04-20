@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1348996135509312, guid: 5e45c8f884f6d124ea0499aae7fdbec8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1818861082154570, guid: 5e45c8f884f6d124ea0499aae7fdbec8, type: 3}
       propertyPath: m_Name
       value: Bomb_Ennemy
@@ -62,7 +66,7 @@ PrefabInstance:
     - target: {fileID: 137188083824238930, guid: 5e45c8f884f6d124ea0499aae7fdbec8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bff4f160cd4790247bf788062d49882c, type: 2}
+      objectReference: {fileID: 2100000, guid: 2bd71c8eafa65794c8aa7e9b937fd711, type: 2}
     - target: {fileID: 199038825183119038, guid: 5e45c8f884f6d124ea0499aae7fdbec8, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -166,9 +170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9c5a1c2c999034f988e2cbb3bd6762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
+  timer: 5
   explosion: 0
-  player: {fileID: 0}
+  shaderObject: {fileID: 2653288946603783090}
 --- !u!114 &8770251303812683282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,7 +198,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6756eed90ca8dc34ea7a9c5e37e58289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+--- !u!1 &2653288946603783090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1348996135509312, guid: 5e45c8f884f6d124ea0499aae7fdbec8, type: 3}
+  m_PrefabInstance: {fileID: 2654496886340988658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &2703761623545053800 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 95448628147039386, guid: 5e45c8f884f6d124ea0499aae7fdbec8, type: 3}

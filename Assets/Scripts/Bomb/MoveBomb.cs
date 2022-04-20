@@ -3,7 +3,7 @@ using UnityEngine.AI;
 
 public class MoveBomb : MonoBehaviour
 {
-    public Transform target;
+    //public Transform target;
 
     private NavMeshAgent agent;
     private AnimBomb anim;
@@ -18,14 +18,17 @@ public class MoveBomb : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<AnimBomb>();
         behavior = GetComponent<BehaviorBomb>();
+
+        //MoveTo();
     }
+
     void Update()
     {
         if (!behavior.explosion)
         {
-            agent.SetDestination(target.position);
+            agent.SetDestination(GameManager.instance.player.transform.position);
 
-            player = target.position;
+            player = GameManager.instance.player.transform.position;
             bomb = transform.position;
 
             if (Vector3.Distance(player, bomb) < 3f)
@@ -39,5 +42,31 @@ public class MoveBomb : MonoBehaviour
                 anim.WalkBomb();
             }
         }
+        else
+        {
+            agent.isStopped = true;
+        }
     }
+
+    /*private void MoveTo()
+    {
+        while (!behavior.explosion)
+        {
+            agent.SetDestination(GameManager.instance.player.transform.position);
+
+            player = GameManager.instance.player.transform.position;
+            bomb = transform.position;
+
+            if (Vector3.Distance(player, bomb) < 3f)
+            {
+                agent.speed = 0f;
+                anim.IdleBomb();
+            }
+            else
+            {
+                agent.speed = 3.5f;
+                anim.WalkBomb();
+            }
+        }
+    }*/
 }

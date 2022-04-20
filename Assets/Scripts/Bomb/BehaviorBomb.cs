@@ -6,26 +6,39 @@ public class BehaviorBomb : MonoBehaviour
     public int timer;
     public bool explosion = false;
 
-    private AnimBomb anim;
+    private float blinkSpeed = 3;
 
-    public GameObject player;
+    private AnimBomb anim;
+    private Renderer bombRenderer;
+
+    private GameObject player;
+    public GameObject shaderObject;
 
     void Start()
     {
         anim = GetComponent<AnimBomb>();
+        bombRenderer = shaderObject.GetComponent<Renderer>();
 
-        timer = 5;
         StartCoroutine(Timer());
+    }
+
+    private void Update()
+    {
+        //player = GameManager.instance.player;
     }
 
     // timer after explosed bomb
     IEnumerator Timer()
     {
-        int timerbis = timer;
-        for (int i = 0; i< timerbis; i++)
+        bombRenderer.sharedMaterial.SetFloat("_Blink_Speed", blinkSpeed);
+
+        int nbTimer = timer;
+        for (int i = 0; i< nbTimer; i++)
         {
             yield return new WaitForSeconds(1.0f);
             timer -= 1;
+            blinkSpeed += 1;
+            bombRenderer.sharedMaterial.SetFloat("_Blink_Speed", blinkSpeed);
         }
         Explosion();
     }
@@ -36,7 +49,6 @@ public class BehaviorBomb : MonoBehaviour
         anim.ExplosionBomb();
         explosion = true;
         StartCoroutine(DestroyBomb());
-        //KillPlayer();
     }
 
     // destroy bomb after 2sec
