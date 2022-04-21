@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     IEnumerator SpawnBomb()
     {
         int index;
-        while (player != null)
+        while (!player.GetComponent<PlayerController>().isDie)
         {
             index = Random.Range(0, 4);
 

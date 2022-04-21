@@ -24,7 +24,7 @@ public class MoveBomb : MonoBehaviour
 
     void Update()
     {
-        if (!behavior.explosion)
+        if (!behavior.explosion && !GameManager.instance.player.GetComponent<PlayerController>().isDie)
         {
             agent.SetDestination(GameManager.instance.player.transform.position);
 
@@ -47,26 +47,4 @@ public class MoveBomb : MonoBehaviour
             agent.isStopped = true;
         }
     }
-
-    /*private void MoveTo()
-    {
-        while (!behavior.explosion)
-        {
-            agent.SetDestination(GameManager.instance.player.transform.position);
-
-            player = GameManager.instance.player.transform.position;
-            bomb = transform.position;
-
-            if (Vector3.Distance(player, bomb) < 3f)
-            {
-                agent.speed = 0f;
-                anim.IdleBomb();
-            }
-            else
-            {
-                agent.speed = 3.5f;
-                anim.WalkBomb();
-            }
-        }
-    }*/
 }
