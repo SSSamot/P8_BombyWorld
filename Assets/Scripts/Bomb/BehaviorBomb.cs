@@ -22,11 +22,6 @@ public class BehaviorBomb : MonoBehaviour
         StartCoroutine(Timer());
     }
 
-    private void Update()
-    {
-        //player = GameManager.instance.player;
-    }
-
     // timer after explosed bomb
     IEnumerator Timer()
     {

@@ -15,7 +15,10 @@ public class PlayerController : MonoBehaviour
     private Camera _mainCamera;
     private NavMeshAgent _agent;
 
-    private bool isDie = false;
+    public bool isDie = false;
+    [SerializeField]
+    private float dissolve;
+    private bool killing = false;
 
     Material mat;
 
@@ -23,16 +26,16 @@ public class PlayerController : MonoBehaviour
     {
         _mainCamera = Camera.main;    
         _agent = GetComponent<NavMeshAgent>();
-        mat = GetComponentInChildren<Renderer>().material;
-    }
+        mat = GetComponentInChildren<Renderer>().sharedMaterial;
 
-    void hit() // call to trigger shader color
-    {
-        mat.SetFloat("_LastHit", Time.time+1);
+        mat.SetFloat("_Cutoff_Height", 5);
+        dissolve = 1.5f;
     }
    
     void Update()
     {
+        //mat.SetFloat("_Cutoff_Height", dissolve);
+        //dissolve -= 0.02f;
         if (!isDie)
         {
             if (_agent.remainingDistance > 1f)
@@ -54,16 +57,29 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        if (killing)
+        {
+            mat.SetFloat("_Cutoff_Height", dissolve);
+            dissolve -= 0.01f;
+        }
+            Debug.Log(dissolve);
+    }
+
     public void HitPlayer()
     {
         isDie = true;
+        anim.SetFloat("Run", 0f);
+        _agent.isStopped = true;
         StartCoroutine(KillPlayer());
     }
 
     IEnumerator KillPlayer()
     {
         anim.SetTrigger("Die");
-        yield return new WaitForSeconds(1.5f);
-        Destroy(gameObject);
+        yield return new WaitForSeconds(1f);
+        killing = true;
+        //Destroy(gameObject);
     }
 }
