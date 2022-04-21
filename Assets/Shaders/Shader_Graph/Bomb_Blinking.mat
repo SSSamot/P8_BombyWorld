@@ -34,7 +34,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Bomb_Classic:
-        m_Texture: {fileID: 2800000, guid: 036a8937c258755408619ffd2506288a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0d891367e46bc1948a196c3ce86b3320, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_0541cf5a99d34d5ab883aac06ce76ef2_Texture_1:
@@ -46,6 +46,6 @@ Material:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _Blink_Speed: 3
-    - _Fresnel_Amplitude: 3
+    - _Fresnel_Amplitude: 0.5
     m_Colors: []
   m_BuildTextureStacks: []
