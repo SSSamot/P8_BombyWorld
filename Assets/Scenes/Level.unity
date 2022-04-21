@@ -15922,7 +15922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &470161741
 Transform:
   m_ObjectHideFlags: 0
@@ -31859,10 +31859,10 @@ Transform:
   - {fileID: 1025199011}
   - {fileID: 2052935635}
   - {fileID: 1755529305}
-  - {fileID: 1463431984}
   - {fileID: 744464779}
-  - {fileID: 1528250530}
   - {fileID: 106141818}
+  - {fileID: 1528250530}
+  - {fileID: 1463431984}
   - {fileID: 1218205548}
   - {fileID: 2017508926}
   - {fileID: 1758189457}
@@ -33361,6 +33361,7 @@ GameObject:
   - component: {fileID: 914725800}
   - component: {fileID: 914725799}
   - component: {fileID: 914725798}
+  - component: {fileID: 914725802}
   m_Layer: 0
   m_Name: FogCamera
   m_TagString: Untagged
@@ -33446,6 +33447,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &914725802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914725797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1001 &915827896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46063,6 +46097,7 @@ GameObject:
   - component: {fileID: 1271337450}
   - component: {fileID: 1271337453}
   - component: {fileID: 1271337454}
+  - component: {fileID: 1271337455}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -46150,6 +46185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectToFollow: {fileID: 478429079}
   Distance: {x: 0, y: 4, z: -3.5}
+  Torch: {fileID: 0}
 --- !u!114 &1271337454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46166,6 +46202,39 @@ MonoBehaviour:
   wallMask:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &1271337455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271337449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!4 &1274118048 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0064875460e5d6b4982c67554afd0f4d, type: 3}
@@ -65436,6 +65505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1854197888}
   - component: {fileID: 1854197887}
+  - component: {fileID: 1854197889}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -65520,6 +65590,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1854197889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854197886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1001 &1855256040
 PrefabInstance:
   m_ObjectHideFlags: 0
