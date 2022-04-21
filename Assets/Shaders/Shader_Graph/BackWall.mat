@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bomb_Blink
-  m_Shader: {fileID: -6465566751694194690, guid: e898211e746d8bd48ad4e6804a121da3, type: 3}
+  m_Name: BackWall
+  m_Shader: {fileID: -6465566751694194690, guid: 6f56ef8993f6c3443a436b110a921d77, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -20,35 +20,11 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BackTex:
-        m_Texture: {fileID: 0}
+    - _Gradient_Map:
+        m_Texture: {fileID: 2800000, guid: 0f3deb75195531347b5d93bb3613ff5e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Bomb_Classic:
-        m_Texture: {fileID: 2800000, guid: 0d891367e46bc1948a196c3ce86b3320, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DownTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _FrontTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _LeftTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _RightTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture:
-        m_Texture: {fileID: 2800000, guid: 0d891367e46bc1948a196c3ce86b3320, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _UpTex:
+    - _Main_Texture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -56,12 +32,15 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _BlinkSpeed: 20
-    - _Blink_Speed: 3
+    - _Cutout_Size: 0.1
+    - _Falloff_Size: 0.05
     m_Colors:
-    - _HitColor: {r: 1, g: 0, b: 0, a: 1}
+    - _Cutout_Position: {r: 0.5, g: 0.25, b: 0, a: 0}
+    - _Light_Gray: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 0}
+    - _Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &2880872583807336170
+--- !u!114 &873029726556089023
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

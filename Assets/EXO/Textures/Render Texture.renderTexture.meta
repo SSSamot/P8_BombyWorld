@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Shaders/Materials/Ground.mat.meta
+guid: 4076b17bb3de2824cae5b127ad14cfaf
+========
+guid: 20e22ed2d30129b46ba4ec97b7cbd286
+>>>>>>>> Pilou:Assets/EXO/Textures/Render Texture.renderTexture.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

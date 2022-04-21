@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Shaders/Materials/Bomb_Blink.mat.meta
+guid: 715604a4879a5f74b9283d5555d35d52
+========
+guid: 7b68351b9f6973a4aaac7c0b9271d640
+>>>>>>>> Pilou:Assets/Shaders/Materials/FogOfWar.mat.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
