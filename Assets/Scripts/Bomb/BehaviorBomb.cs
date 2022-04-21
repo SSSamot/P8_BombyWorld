@@ -55,7 +55,7 @@ public class BehaviorBomb : MonoBehaviour
     IEnumerator DestroyBomb()
     {
         yield return new WaitForSeconds(1.0f);
-        KillPlayer();
+        CallKillPlayer();
         yield return new WaitForSeconds(1.0f);
         Destroy(this.gameObject);
     }
@@ -77,11 +77,11 @@ public class BehaviorBomb : MonoBehaviour
         }
     }
 
-    void KillPlayer()
+    void CallKillPlayer()
     {
         if(player != null)
         {
-            Destroy(player);
+            player.GetComponent<PlayerController>().HitPlayer();
         }
     }
 }
