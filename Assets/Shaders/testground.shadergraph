@@ -46,9 +46,6 @@
             "m_Id": "cfb6b2de72dc470d9f8753eb954d05ff"
         },
         {
-            "m_Id": "2934e3a4133b4a239296401d12ca03b7"
-        },
-        {
             "m_Id": "e2992a193132493eb5abb27c98924146"
         },
         {
@@ -56,6 +53,9 @@
         },
         {
             "m_Id": "1e380792426e4183b6b5220e048342ce"
+        },
+        {
+            "m_Id": "ac8f0115af2e40f3ac56a299865c6329"
         }
     ],
     "m_GroupDatas": [],
@@ -78,20 +78,6 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
-                    "m_Id": "2934e3a4133b4a239296401d12ca03b7"
-                },
-                "m_SlotId": 1
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "1932200ea0f046e5a3f6ce94f5053b33"
-                },
-                "m_SlotId": 0
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
                     "m_Id": "69705d3a028f42e381654fb3baf74305"
                 },
                 "m_SlotId": 0
@@ -106,13 +92,27 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
+                    "m_Id": "ac8f0115af2e40f3ac56a299865c6329"
+                },
+                "m_SlotId": 1
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "1932200ea0f046e5a3f6ce94f5053b33"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
                     "m_Id": "e2992a193132493eb5abb27c98924146"
                 },
                 "m_SlotId": 0
             },
             "m_InputSlot": {
                 "m_Node": {
-                    "m_Id": "2934e3a4133b4a239296401d12ca03b7"
+                    "m_Id": "ac8f0115af2e40f3ac56a299865c6329"
                 },
                 "m_SlotId": 683705142
             }
@@ -417,73 +417,6 @@
 {
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
-    "m_ObjectId": "22255871132f4b1b99885ea18e44954c",
-    "m_Id": 1,
-    "m_DisplayName": "Out_Vec3",
-    "m_SlotType": 1,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Out_Vec3",
-    "m_StageCapability": 3,
-    "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-    },
-    "m_DefaultValue": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-    },
-    "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.SubGraphNode",
-    "m_ObjectId": "2934e3a4133b4a239296401d12ca03b7",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "SphericWorld",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": -454.0000305175781,
-            "y": -257.9999694824219,
-            "width": 208.0,
-            "height": 278.0
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "b4d8e64b362f4c04ac0b91fb9f6f7ab6"
-        },
-        {
-            "m_Id": "22255871132f4b1b99885ea18e44954c"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_SerializedSubGraph": "{\n    \"subGraph\": {\n        \"fileID\": -5475051401550479605,\n        \"guid\": \"1622e304bf243d841b5a02cc79f39b77\",\n        \"type\": 3\n    }\n}",
-    "m_PropertyGuids": [
-        "4d8666fb-1834-441e-922b-a4f66bd6fcd7"
-    ],
-    "m_PropertyIds": [
-        683705142
-    ],
-    "m_Dropdowns": [],
-    "m_DropdownSelectedEntries": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "2b67af1b1dd54b75a6b51352cab8a452",
     "m_Id": 0,
     "m_DisplayName": "_PlayerPosition",
@@ -713,8 +646,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -545.0,
-            "y": 200.0,
+            "x": -547.0,
+            "y": 236.0,
             "width": 139.0,
             "height": 34.0
         }
@@ -869,8 +802,52 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.SubGraphNode",
+    "m_ObjectId": "ac8f0115af2e40f3ac56a299865c6329",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "SphericWorld",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -407.9999694824219,
+            "y": -268.0000305175781,
+            "width": 208.00003051757813,
+            "height": 278.0000915527344
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "b5664c2c42254ec5af56c5a2c6ed5914"
+        },
+        {
+            "m_Id": "e7379618253540269e83538cc9986e26"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedSubGraph": "{\n    \"subGraph\": {\n        \"fileID\": -5475051401550479605,\n        \"guid\": \"b8f2b0b905400254e8837ba2503cb66b\",\n        \"type\": 3\n    }\n}",
+    "m_PropertyGuids": [
+        "4d8666fb-1834-441e-922b-a4f66bd6fcd7"
+    ],
+    "m_PropertyIds": [
+        683705142
+    ],
+    "m_Dropdowns": [],
+    "m_DropdownSelectedEntries": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
-    "m_ObjectId": "b4d8e64b362f4c04ac0b91fb9f6f7ab6",
+    "m_ObjectId": "b5664c2c42254ec5af56c5a2c6ed5914",
     "m_Id": 683705142,
     "m_DisplayName": "PlayerPos",
     "m_SlotType": 0,
@@ -1130,6 +1107,29 @@
         "b": 0.5,
         "a": 1.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
+    "m_ObjectId": "e7379618253540269e83538cc9986e26",
+    "m_Id": 1,
+    "m_DisplayName": "Out_Vec3",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out_Vec3",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "m_Labels": []
 }
 
 {

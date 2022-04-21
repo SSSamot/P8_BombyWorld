@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,11 +12,13 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
+    [SerializeField] GameObject Torch;
+
     private void Awake()
     {
         if (instance != null)
         {
-            Debug.LogWarning("Il n'y a plus d'instance de 'GameManager' dans la sc�ne");
+            Debug.LogWarning("Il n'y a plus d'instance de 'GameManager' dans la scène");
             return;
         }
 

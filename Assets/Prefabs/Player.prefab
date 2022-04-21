@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 3466225399282414437}
+  Torch: {fileID: 6005542277889170059, guid: 67523f395223d8b48b624ce543eeea11, type: 3}
   _rayMaxDistance: 20
   _groundLayer:
     serializedVersion: 2

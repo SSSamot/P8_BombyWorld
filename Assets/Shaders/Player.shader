@@ -5,7 +5,6 @@ Shader "Learning/Unlit/TO RENAME"
         _Texture("Character_Texture", 2D) = "white" {}
         _HitColor("HitColor", Color) = (1,0,0,1)
         _LastHit("LastHitTime",Float) = 0
-        _BorderSize("BorderSize",Range(0,1)) = 0
     }
     
     SubShader
@@ -21,7 +20,6 @@ Shader "Learning/Unlit/TO RENAME"
             sampler2D _Texture;
             float4 _HitColor;
             float _LastHit;
-            float _BorderSize;
 			
 			struct vertexInput
             {
@@ -51,11 +49,6 @@ Shader "Learning/Unlit/TO RENAME"
             float4 frag(v2f i) : SV_Target
             {
                 float4 tex = tex2D(_Texture, i.uv); 
-
-                float3 V = normalize(_WorldSpaceCameraPos - i.ws_Pos);
-                float3 N = normalize(i.ws_normal);
-                float res = floor(dot(N, V)+ _BorderSize);
-                tex = lerp(float4(0, 0, 0, 0), tex, res);
                 return lerp(tex, _HitColor, clamp(_LastHit-_Time.x*20,0,0.8));
             }
             
