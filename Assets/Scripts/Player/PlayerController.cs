@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
    
     void Update()
     {
-        //Shader.SetGlobalVector("WS_PlayerPosition", transform.position);
+        Shader.SetGlobalVector("_PlayerPosition", transform.position);
         if (!Input.GetMouseButtonDown(0))
             return;
         
