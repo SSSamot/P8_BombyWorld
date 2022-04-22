@@ -8,6 +8,8 @@ public class CutoutObject : MonoBehaviour
     private Transform targetObject;
 
     [SerializeField]
+    Vector3 ost = new Vector3(0,0,0);
+    [SerializeField]
     private LayerMask wallMask;
 
     private Camera mainCamera;
@@ -21,12 +23,14 @@ public class CutoutObject : MonoBehaviour
     {
         Vector2 cutoutPos = mainCamera.WorldToViewportPoint(targetObject.position);
         cutoutPos.y /= (Screen.width / Screen.height);
-        Vector3 offset = targetObject.position - transform.position;
+        Vector3 offset = targetObject.position - transform.position ;
         RaycastHit[] hitObjects = Physics.RaycastAll(transform.position, offset, offset.magnitude, wallMask);
 
         for (int i = 0; i < hitObjects.Length; i++)
         {
-            Material[] materials = hitObjects[i].transform.GetComponent<Renderer>().materials;
+            var a = hitObjects[i].transform.GetComponent<Renderer>();
+            if (!a) continue;
+            Material[] materials = a.materials;
 
             for (int m = 0; m < materials.Length; m++)
             {

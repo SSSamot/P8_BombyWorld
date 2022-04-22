@@ -14,12 +14,16 @@ public class CameraBehaviour : MonoBehaviour
     {
         objectTransform = ObjectToFollow.transform;
         cam = GetComponent<Camera>();
+        cam.cullingMatrix = Matrix4x4.Ortho(-99999, 99999, -99999, 99999, 0.001f, 99999) *
+                             Matrix4x4.Translate(Vector3.forward * -99999 / 2f) *
+                             cam.worldToCameraMatrix;
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position = objectTransform.position+ Distance;
+        transform.LookAt(objectTransform);
         if(Input.GetMouseButtonDown(1))
         {
             RaycastHit hit;
@@ -28,5 +32,9 @@ public class CameraBehaviour : MonoBehaviour
                 Instantiate(Torch, hit.transform);
             }
         }
+    }
+    void OnDisable()
+    {
+        cam.ResetCullingMatrix();
     }
 }

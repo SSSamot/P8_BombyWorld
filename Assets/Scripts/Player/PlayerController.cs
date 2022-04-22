@@ -27,13 +27,13 @@ public class PlayerController : MonoBehaviour
         _mainCamera = Camera.main;    
         _agent = GetComponent<NavMeshAgent>();
         mat = GetComponentInChildren<Renderer>().sharedMaterial;
-
         mat.SetFloat("_Cutoff_Height", 5);
         dissolve = 1.5f;
     }
    
     void Update()
     {
+        Shader.SetGlobalVector("_PlayerPosition", transform.position);
         //mat.SetFloat("_Cutoff_Height", dissolve);
         //dissolve -= 0.02f;
         if (!isDie)
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
             else
                 anim.SetFloat("Run", 0f);
 
-            Shader.SetGlobalVector("_PlayerPosition", transform.position);
+            
             if (!Input.GetMouseButtonDown(0))
                 return;
 
@@ -64,7 +64,6 @@ public class PlayerController : MonoBehaviour
             mat.SetFloat("_Cutoff_Height", dissolve);
             dissolve -= 0.01f;
         }
-            Debug.Log(dissolve);
     }
 
     public void HitPlayer()
