@@ -129,6 +129,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: c9ebc19e7c0b61441922b3c964108fdd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_8ed22626ac8d47e895ea78e8672fc18a_Texture_1:
+        m_Texture: {fileID: 8400000, guid: 4076b17bb3de2824cae5b127ad14cfaf, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -166,7 +170,7 @@ Material:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _BlinkSpeed: 10.06
-    - _Blink_Speed: 6
+    - _Blink_Speed: 7
     - _BumpScale: 1
     - _CurvFix: 1
     - _CurvatureU: 0

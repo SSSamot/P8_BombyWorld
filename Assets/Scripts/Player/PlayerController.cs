@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
     private float dissolve;
     private bool killing = false;
 
+    [SerializeField]
+    GameObject Torch;
+
     Material mat;
 
     void Start()
@@ -36,6 +39,7 @@ public class PlayerController : MonoBehaviour
         Shader.SetGlobalVector("_PlayerPosition", transform.position);
         //mat.SetFloat("_Cutoff_Height", dissolve);
         //dissolve -= 0.02f;
+        if (Input.GetKeyDown(KeyCode.Space)) Instantiate(Torch,transform.position,transform.rotation);
         if (!isDie)
         {
             if (_agent.remainingDistance > 1f)

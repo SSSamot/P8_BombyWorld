@@ -18,6 +18,7 @@ public class CameraBounds : MonoBehaviour
                                      _camera.transform.position.z + _camera.orthographicSize);  // max Z
 
         Shader.SetGlobalVector("_XZ_CameraBounds", _xzCameraBounds);
+        Debug.Log(_xzCameraBounds);
     }
 
     private void OnDrawGizmos()
