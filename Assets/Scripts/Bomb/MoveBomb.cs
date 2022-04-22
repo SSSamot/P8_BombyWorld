@@ -31,14 +31,14 @@ public class MoveBomb : MonoBehaviour
             player = GameManager.instance.player.transform.position;
             bomb = transform.position;
 
-            if (Vector3.Distance(player, bomb) < 3f)
+            if (Vector3.Distance(player, bomb) < 2f)
             {
                 agent.speed = 0f;
-                anim.IdleBomb();
+                behavior.Explosion();
             }
             else
             {
-                agent.speed = 3.5f;
+                agent.speed = 4f;
                 anim.WalkBomb();
             }
         }

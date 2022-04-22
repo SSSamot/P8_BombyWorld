@@ -39,7 +39,7 @@ public class BehaviorBomb : MonoBehaviour
     }
 
     // anim explosion + block movement + call DestroyBomb()
-    void Explosion()
+    public void Explosion()
     {
         anim.ExplosionBomb();
         explosion = true;
@@ -49,9 +49,9 @@ public class BehaviorBomb : MonoBehaviour
     // destroy bomb after 2sec
     IEnumerator DestroyBomb()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.75f);
         CallKillPlayer();
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
     }
 

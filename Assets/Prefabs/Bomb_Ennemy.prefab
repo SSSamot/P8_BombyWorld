@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9c5a1c2c999034f988e2cbb3bd6762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 5
+  timer: 10
   explosion: 0
   shaderObject: {fileID: 2653288946603783090}
 --- !u!114 &8770251303812683282
