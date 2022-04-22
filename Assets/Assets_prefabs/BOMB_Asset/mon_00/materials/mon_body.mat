@@ -170,7 +170,7 @@ Material:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _BlinkSpeed: 10.06
-    - _Blink_Speed: 7
+    - _Blink_Speed: 9
     - _BumpScale: 1
     - _CurvFix: 1
     - _CurvatureU: 0
