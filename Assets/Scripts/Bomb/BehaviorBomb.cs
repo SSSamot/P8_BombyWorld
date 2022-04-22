@@ -49,7 +49,7 @@ public class BehaviorBomb : MonoBehaviour
     // destroy bomb after 2sec
     IEnumerator DestroyBomb()
     {
-        yield return new WaitForSeconds(0.75f);
+        yield return new WaitForSeconds(1f);
         CallKillPlayer();
         yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
